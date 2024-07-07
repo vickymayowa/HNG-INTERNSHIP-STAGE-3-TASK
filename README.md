@@ -1,6 +1,6 @@
 # Organization Management App
 
-[Visit the App](https://organization-managnment-app.onrender.com/)
+[Visit the App]()
 
 This application facilitates user and organization management, offering features such as user registration, login, and user-organization associations.
 
@@ -33,7 +33,7 @@ This application facilitates user and organization management, offering features
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/organization-management-app.git
+   git clone https://github.com/vickymayowa/HNG-INTERNSHIP-STAGE-3-TASK
    cd organization-management-app
    ```
 
