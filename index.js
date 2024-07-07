@@ -14,7 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // Root route
 app.get("/", (req, res) => {
-  res.send("Hello to HNG internship");
+  res.json({
+    message: "Welcome to HNG INTERNSHIP STAGE 3 TASK",
+    status: true,
+  });
 });
 
 // API routes
@@ -27,7 +30,7 @@ const startServer = async () => {
     await sequelize.authenticate();
     console.log("Database connected...");
 
-    await sequelize.sync({ alter: true }); // Ensure models are synchronized with the database
+    await sequelize.sync({ alter: true });
     console.log("Database synchronized...");
 
     const server = app.listen(PORT, () => {
@@ -42,7 +45,7 @@ const startServer = async () => {
       }
     });
   } catch (err) {
-    console.error("Unable to connect to the database:", err);
+    console.error("Unable to connect to the database");
   }
 };
 
