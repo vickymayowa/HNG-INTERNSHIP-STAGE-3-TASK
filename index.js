@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Root route
 app.get("/", (req, res) => {
-  res.json({
+  res.status(200).json({
     message: "Welcome to HNG INTERNSHIP STAGE 3 TASK",
     status: true,
   });
