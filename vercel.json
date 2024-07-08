@@ -12,5 +12,6 @@
       "dest": "/",
       "methods": ["GET", "POST", "PUT", "DELETE"]
     }
-  ]
+  ],
+  "dependencies": ["pg"]
 }
