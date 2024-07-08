@@ -1,10 +1,10 @@
 require("dotenv").config();
 const express = require("express");
 
-const authRoutes = require("./src/routes/authRoutes");
-const organisationRoutes = require("./src/routes/organisationRoutes");
-const userRoutes = require("./src/routes/userRoutes");
-const { sequelize } = require("./src/models");
+const authRoutes = require("./routes/authRoutes");
+const organisationRoutes = require("./routes/organisationRoutes");
+const userRoutes = require("./routes/userRoutes");
+const { sequelize } = require("./models");
 
 const app = express();
 const PORT = process.env.PORT;

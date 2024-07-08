@@ -1,9 +1,7 @@
 const { Sequelize } = require("sequelize");
 require("dotenv").config();
 
-const DATABASE_URL =
-  "postgresql://techie_dev_09:IyoWOLFkyFOvxTgF88Z3WBsItSS3oQeZ@dpg-cq3t6obqf0us73dngbi0-a.oregon-postgres.render.com/hng_internship_task_3";
-
+const DATABASE_URL = process.env.POSTGRES_DATABASE_URL;
 const sequelize = new Sequelize(DATABASE_URL, {
   dialect: "postgres",
   logging: false,
@@ -27,6 +25,6 @@ sequelize
   .then(() =>
     console.log("Database connection has been established successfully.")
   )
-  .catch((err) => console.log("Unable to connect to the database:", err));
+  .catch((err) => console.log("Unable to connect to the database"));
 
 module.exports = sequelize;
