@@ -11,10 +11,11 @@ exports.getOrganisations = asyncHandler(async (req, res) => {
   });
 
   res.status(200).json({
-    status: "success",
     message: "Organisations fetched successfully",
     data: {
-      organisations: user.Organisations,
+      orgId: Organisation.orgId,
+      name: Organisation.name,
+      description: Organisation.description,
     },
   });
 });
@@ -31,6 +32,7 @@ exports.getSingleOrganisation = asyncHandler(async (req, res) => {
   }
 
   res.status(200).json({
+    status: "success",
     message: "Organisation fetched successfully",
     data: {
       orgId: organisation.orgId,
