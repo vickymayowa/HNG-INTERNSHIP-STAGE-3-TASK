@@ -31,7 +31,6 @@ exports.getSingleOrganisation = asyncHandler(async (req, res) => {
   }
 
   res.status(200).json({
-    status: "success",
     message: "Organisation fetched successfully",
     data: {
       orgId: organisation.orgId,
